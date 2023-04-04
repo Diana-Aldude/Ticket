@@ -72,7 +72,7 @@
 
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
-                    <label for="ticket"><strong>TICKET </strong></label>
+                    <label for="ticket"><strong>TICKETS </strong></label>
                     <input name="ticket" type="text" class="form-control" id="ticket" placeholder="" value="" autocomplete="off">
                   </div>
                   <div class="col-md-6 mb-3">
