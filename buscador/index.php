@@ -176,8 +176,8 @@
     <script src="popper/popper.min.js"></script>
     <script src="bootstrap4/js/bootstrap.min.js"></script>
     <!-- <script src="codigo.js"></script> -->
-    <script src="main.js"></script>
-    <script src="generador.js"></script>
+    <script src="../main.js"></script>
+    <script src="../generador.js"></script>
 
     <script>
       function recibir(){

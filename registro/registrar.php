@@ -161,8 +161,8 @@
 
                 <button id="emailbutton" class="btn btn-outline-danger" type="submit" value="Proveedor" onclick="SendMail()">Proveedor</button>
                 <!-- <button id="enviarproveedor" class="btn btn-outline-danger" type="submit" value="Proveedor">Proveedor</button> -->
-                <button id="enviarpendiente" class="btn btn-outline-danger" type="submit" value="Pendiente">Pendiente</button>
-                <button id="enviarcliente" class="btn btn-outline-danger" type="submit" value="Cliente">Cliente</button><br>
+                <button id="enviarpendiente" class="btn btn-outline-danger" type="submit" value="Pendiente" onclick="Sendpendiente()">Pendiente</button>
+                <button id="enviarcliente" class="btn btn-outline-danger" type="submit" value="Cliente" onclick="Sendcliente()">Cliente</button><br>
 
                 
                 
