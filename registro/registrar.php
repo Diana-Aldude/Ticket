@@ -170,77 +170,20 @@
               </form><br>
               
 
-
-                <div>
+              <div>
                   <div>
                     <label><strong>COPIAR Y PEGAR EN EL SGA:</strong></label>
                    
-
-                
-      <script>
-        function insertCell(title,cellData){
-        // Crear una nueva fila en la tabla
-        var tabla = document.getElementById("myTable").getElementsByTagName('tbody')[0];
-        
-        var fila = tabla.insertRow();
-        var titleCell = fila.insertCell(0);
-        var celdaNombre = fila.insertCell(1);
-        
-        titleCell.innerHTML += title;
-        celdaNombre.innerHTML += cellData;
-
-
-
-        }
-
-
-
-      function agregarFila() {
-        // Obtener los valores de los campos del formulario
-        var rz = document.getElementById("rz").value;
-        var ruc = document.getElementById("ruc").value;
-        var email = document.getElementById("email").value;
-        var nombre = document.getElementById("contacto").value;
-        var numero = document.getElementById("ncontacto").value;
-        var disponibilidad = document.getElementById("disponibilidad").value;
-        var cid = document.getElementById("cid").value;
-        var ticket = document.getElementById("ticket").value;
-        var detalle = document.getElementById("detalle").value;
-
-        const customers = [{title:"Razon Social", value:rz}, {title:"Ruc", value:ruc}, {title:"Email", value:email}, {title:"Nombre", value:nombre}, {title:"Numero", value:numero}, {title:"Disponibilidad", value:disponibilidad},{title:"cid", value:cid}, {title:"ticket", value:ticket}, {title:"detalle", value:detalle}];
-      
-        customers.map((customer)=>insertCell(`<strong>${customer.title}</strong>`,customer.value))
-        
-        
-        
-      }
-
-
-
-
-      
-        document.getElementById("myForm").addEventListener("submit", function(event){
-          event.preventDefault();
-          agregarFila();
-        });
-      </script>
-
-
- <table id="myTable" border="1">
-        
-        <tbody>
-          
-        </tbody>
-       
-
-      </table>
-
-
-
-
+                     
+                    <div>SN:</div><div id="resultado"></div>
+                    <div>Nombre del contacto:</div><div id="resultado1"></div>
+                    <div>Numero del contacto:</div><div id="resultado2"></div>
+                    <div>Correo:</div><div id="resultado3"></div>
+                    <div>Disponibilidad:</div><div id="resultado4"></div>
+                    <div>CID:</div><div id="resultado5"></div>
+                    <div>Detalles:</div><div id="resultado6"></div>
+                  </div>
                 </div>
-
-               
             
 
               <!-- <div>
@@ -256,8 +199,8 @@
     <script src="popper/popper.min.js"></script>
     <script src="bootstrap4/js/bootstrap.min.js"></script>
     <!-- <script src="codigo.js"></script> -->
-    <script src="main.js"></script>
-    <script src="generador.js"></script>
+    <script src="../main.js"></script>
+    <script src="../generador.js"></script>
 
     <script>
       function recibir(){
@@ -268,96 +211,10 @@
         var disponibilidad = document.getElementById("disponibilidad").value;
         var cid = document.getElementById("cid").value;
         var detalle = document.getElementById("detalle").value;
-        
-         document.write("<table border="1"><tr><td>SN:</td><td>"+sn+
-         "</td></tr><tr><td>Nombre del contacto:</td><td>"+contacto+
-         "</td></tr><tr><td>Numero del contacto:</td><td>"+ncontacto+
-         "</td></tr><tr><td>Correo:</td><td>"+email+"</td></tr><tr><td>Disponibilidad:</td><td>"
-         +disponibilidad+"</td></tr><tr><td>CID:</td><td >"+cid+"</td></tr><tr><td>Detalles:</td><td>"
-         +detalle+"</td></tr></table>");
+        document.write("SN: "+sn+ "<br/>Nombre del contacto: "+contacto+ "<br/>Numero del contacto: "+ncontacto+ "<br/>Correo: "+email+ "<br/>Disponibilidad: "+disponibilidad+ "<br/>CID: "+cid+ "<br/>Detalles: "+detalle);
 
       }
     </script>
-
-<!-- document.write("SN: "+sn+ "<br/>Nombre del contacto: "+contacto+
-         "<br/>Numero del contacto: "+ncontacto+ "<br/>Correo: "+email+ 
-         "<br/>Disponibilidad: "+disponibilidad+ "<br/>CID: "+cid+ 
-         "<br/>Detalles: "+detalle);
-
-  <script>
-  const btnEnvio = document.getElementById('enviarproveedor');
-
-  btnEnvio.addEventListener('click', function(e) {
-    e.preventDefault();
-    const sn = document.getElementById('sn').value;
-    const rz = document.getElementById('rz').value;
-    const ruc = document.getElementById('ruc').value;
-    const email = document.getElementById('email').value;
-    const contacto = document.getElementById('contacto').value;
-    const ncontacto = document.getElementById('ncontacto').value;
-    const disponibilidad = document.getElementById('disponibilidad').value;
-    const cid = document.getElementById('cid').value;
-    const ticket = document.getElementById('ticket').value;
-    const tcliente = document.getElementById('tcliente').value;
-    const proveedor = document.getElementById('proveedor').value;
-    const detalle = document.getElementById('detalle').value;
-    const cc = document.getElementById('cc').value;
-    window.location.href = `mailto:${proveedor}?cc=${cc}&subject=${tcliente} II ${rz} II CID.${cid} II SVA-CAMBIOS:${ticket}&body=
-    
-    RAZON SOCIAL: ${rz}\n RUC: ${ruc}\n EMAIL: ${email} NOMBRE DEL CONTACTO: ${contacto} NUMEROS DEL CONTACTO: ${ncontacto} DISPONIBILIDAD: ${disponibilidad} CID (Circuito): ${cid} TICKET (Incidencia): ${ticket} DETALLES: ${detalle}`;
-  });
-</script>
-
-<script>
-  const btnEnvio1 = document.getElementById('enviarpendiente');
-
-  btnEnvio1.addEventListener('click', function(e) {
-    e.preventDefault();
-    const sn = document.getElementById('sn').value;
-    const rz = document.getElementById('rz').value;
-    const ruc = document.getElementById('ruc').value;
-    const email = document.getElementById('email').value;
-    const contacto = document.getElementById('contacto').value;
-    const ncontacto = document.getElementById('ncontacto').value;
-    const disponibilidad = document.getElementById('disponibilidad').value;
-    const cid = document.getElementById('cid').value;
-    const ticket = document.getElementById('ticket').value;
-    const tcliente = document.getElementById('tcliente').value;
-    const proveedor = document.getElementById('proveedor').value;
-    const detalle = document.getElementById('detalle').value;
-    const cc = document.getElementById('cc').value;
-    window.location.href = `mailto:?cc=${cc};${email}&subject=${rz} II CID.${cid} II PENDIENTE DE VALIDACIÓN POR PARTE DEL CLIENTE&body=
-    
-    RAZON SOCIAL: ${rz} RUC: ${ruc} EMAIL: ${email} NOMBRE DEL CONTACTO: ${contacto} NUMEROS DEL CONTACTO: ${ncontacto} CID (Circuito): ${cid} DETALLES: ${detalle}`;
-  });
-</script>
-
-<script>
-  const btnEnvio2 = document.getElementById('enviarcliente');
-
-  btnEnvio2.addEventListener('click', function(e) {
-    e.preventDefault();
-    const sn = document.getElementById('sn').value;
-    const rz = document.getElementById('rz').value;
-    const ruc = document.getElementById('ruc').value;
-    const email = document.getElementById('email').value;
-    const contacto = document.getElementById('contacto').value;
-    const ncontacto = document.getElementById('ncontacto').value;
-    const disponibilidad = document.getElementById('disponibilidad').value;
-    const cid = document.getElementById('cid').value;
-    const ticket = document.getElementById('ticket').value;
-    const tcliente = document.getElementById('tcliente').value;
-    const proveedor = document.getElementById('proveedor').value;
-    const detalle = document.getElementById('detalle').value;
-    const cc = document.getElementById('cc').value;
-    window.location.href = `mailto:${email}?cc=${cc} &subject=${rz} II CID.${cid} II SVA-CAMBIOS:${ticket}&body=Estimados Srs,
-
-    Cordialmente me dirijo a ustedes, en la oportunidad de informarles que se ha creado un ticket de solicitud de cambios de servicios gestionados:  ${ticket}`;
-  });
-</script> -->
-
-
-
 
 </body>
 
