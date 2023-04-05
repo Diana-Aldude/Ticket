@@ -19,3 +19,13 @@ function mostrar5(valor){
 function mostrar6(valor){
     document.getElementById("resultado6").innerHTML=valor;
 }
+function showContactName(valor){
+    document.getElementById("resultado-contact-nombre").innerHTML=valor;
+}
+function showContactNumber(valor){
+    document.getElementById("resultado-contact-numero").innerHTML=valor;
+}
+function showContactEmail(valor){
+    document.getElementById("resultado-contact-email").innerHTML=valor;
+}
+

@@ -33,33 +33,25 @@
                 
           </div>
           <div class="card-body">
-           
-
-        
-
                    <?php
-                
                         include '../config/config.php';
                         include 'buscadorcid.php';
                  ?>
            </div>
-
-
            <!--Seleccionador de nombres -->
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="contacto"><strong>NOMBRE DEL CONTACTO:</strong></label>
-                    <input name="contacto" type="text" class="form-control" id="contacto" onkeyup="mostrar1(this.value)" placeholder="" value="" autocomplete="off">
+                    <input name="contacto" class="form-control" id="contacto">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="ncontacto"><strong>NUMEROS DEL CONTACTO:</strong></label>
-                    <input name="ncontacto" type="text" class="form-control" id="ncontacto" onkeyup="mostrar2(this.value)" placeholder="" value="" autocomplete="off">
+                    <input name="ncontacto" class="form-control" id="ncontacto">
                   </div>
-                
-                
+              
                 <div class="col-md-6 mb-3">
                   <label for="email"><strong>EMAIL:</strong></label>
-                  <input name="email" type="text" class="form-control" id="email" onkeyup="mostrar3(this.value)" placeholder="" value="" autocomplete="off">
+                  <input name="email" type="email" class="form-control" id="email">
                 </div>
 
                 
@@ -73,7 +65,7 @@
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="ticket"><strong>TICKETS </strong></label>
-                    <input name="ticket" type="text" class="form-control" id="ticket" placeholder="" value="" autocomplete="off">
+                    <input name="ticket" type="text" class="form-control" id="ticket"  autocomplete="off">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="tcliente" ><strong>TIPO DE CLIENTE:</strong></label>
@@ -153,9 +145,9 @@
                    
                      
                     <div>SN:</div><div id="resultado"></div>
-                    <div>Nombre del contacto:</div><div id="resultado1"></div>
-                    <div>Numero del contacto:</div><div id="resultado2"></div>
-                    <div>Correo:</div><div id="resultado3"></div>
+                    <div>Nombre del contacto:</div><div id="resultado-contact-nombre"></div>
+                    <div>Numero del contacto:</div><div id="resultado-contact-numero"></div>
+                    <div>Correo:</div><div id="resultado-contact-email"></div>
                     <div>Disponibilidad:</div><div id="resultado4"></div>
                     <div>CID:</div><div id="resultado5"></div>
                     <div>Detalles:</div><div id="resultado6"></div>
@@ -178,12 +170,15 @@
     <!-- <script src="codigo.js"></script> -->
     <script src="../main.js"></script>
     <script src="../generador.js"></script>
+    <script src="../utils-js/getContactById.js"></script>
+    <script src="../utils-js/onSetCompanyData.js"></script>
+    
 
     <script>
       function recibir(){
         var sn = document.getElementById("sn").value;
         var contacto = document.getElementById("contacto").value;
-        var ncontacto = document.getElementById("ncontacto").value;
+        var ncontacto = document.getElementById("contacto").value;
         var email = document.getElementById("email").value;
         var disponibilidad = document.getElementById("disponibilidad").value;
         var cid = document.getElementById("cid").value;

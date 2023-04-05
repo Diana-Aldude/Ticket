@@ -62,7 +62,6 @@ function Sendcliente(){
     window.location.href = "mailto:"+email+"?cc="+cc+" || "+rz+" || CID."+cid+" || SVA-CAMBIOS:"+ticket+
     "&body= '<table border=1><tr><td>'CID (circuito):'</td><td>'"+cid+
     "'</td></tr><tr><td>'Ticket:'</td><td>'"+ticket+
-    
     "'</td></tr></table>'";
 
 
