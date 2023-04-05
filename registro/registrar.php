@@ -30,7 +30,7 @@
           
             <div class="card-header">GENERADOR DE CORREO
             
-            <button type="submit" name="regresar" class="btn btn-ligth float-right" ><a href="../index.php">Regresar</a> </button>
+            <button type="submit" name="regresar" class="btn btn-ligth float-right" ><a href="../BUSCADOR/INDEX.PHP">Regresar</a> </button>
                
           </div>
             <div class="card-body">

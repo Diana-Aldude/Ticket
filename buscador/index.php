@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="#" />
   <link rel="stylesheet" href="../bootstrap4/css/bootstrap.min.css">
   <link rel="stylesheet" href="../estilos.css">
+  <script src="../generador.js"></script>
   <title>Tickets</title>
 </head>
 
@@ -127,12 +128,12 @@
 
                 </form>
 
-                <button id="emailbutton" class="btn btn-outline-primary" type="submit" value="Proveedor" onclick="SendMail()">Proveedor</button>
+                <button id="emailbutton" class="btn btn-outline-primary" type="submit" value="Proveedor" onclick="SendProveedor()">Proveedor</button>
                 <!-- <button id="enviarproveedor" class="btn btn-outline-danger" type="submit" value="Proveedor">Proveedor</button> -->
-                <button id="enviarpendiente" class="btn btn-outline-primary" type="submit" value="Pendiente">Pendiente</button>
+                <button id="enviarpendiente" class="btn btn-outline-primary" type="submit" onclick="SendPendiente()" value="Pendiente">Pendiente</button>
                 
-                <button id="enviarcliente" class="btn btn-outline-primary" type="submit" value="Cliente">Cliente</button><br>
-                <button id="enviarresponsiva" class="btn btn-outline-primary" type="submit" value="Responsiva">Responsiva</button>
+                <button id="enviarcliente" class="btn btn-outline-primary" type="submit" onclick="SendCliente()" value="Cliente">Cliente</button><br>
+                <button id="enviarresponsiva" class="btn btn-outline-primary" type="submit" onclick="SendResponsiva()" value="Responsiva">Responsiva</button>
                 <!--Falta agregar documento  de responsiva-->
                 
                 
@@ -169,7 +170,7 @@
     <script src="bootstrap4/js/bootstrap.min.js"></script>
     <!-- <script src="codigo.js"></script> -->
     <script src="../main.js"></script>
-    <script src="../generador.js"></script>
+   
     <script src="../utils-js/getContactById.js"></script>
     <script src="../utils-js/onSetCompanyData.js"></script>
     
